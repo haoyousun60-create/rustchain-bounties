@@ -42,7 +42,7 @@ Copy `rtc_balance.sh` to a directory in your PATH, or add this function to your 
 ```bash
 rtc-balance() {
   wallet="${1:?Usage: rtc-balance <wallet-name>}"
-  curl -s "https://50.28.86.131/wallet/balance?wallet_id=$wallet" | python3 -c '
+  curl -s "https://50.28.86.131/wallet/balance?miner_id=$wallet" | python3 -c '
 import sys, json
 try:
     d = json.load(sys.stdin)
@@ -60,7 +60,7 @@ except Exception as e:
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET https://50.28.86.131/wallet/balance?wallet_id={name}` | Get RTC balance for wallet |
+| `GET https://50.28.86.131/wallet/balance?miner_id={name}` | Get RTC balance for wallet |
 | `GET https://50.28.86.131/epoch` | Current epoch number + miner count |
 | `GET https://50.28.86.131/health` | Node health status |
 

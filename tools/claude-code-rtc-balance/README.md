@@ -70,7 +70,7 @@ Then use it anywhere in Claude Code:
 
 | Endpoint | Description |
 |----------|-------------|
-| `GET https://50.28.86.131/wallet/balance?wallet_id={name}` | Get wallet RTC balance |
+| `GET https://50.28.86.131/wallet/balance?miner_id={name}` | Get wallet RTC balance |
 | `GET https://50.28.86.131/epoch` | Current epoch + miner count |
 | `GET https://50.28.86.131/health` | Node health |
 
