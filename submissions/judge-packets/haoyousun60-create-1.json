@@ -1,46 +1,46 @@
 {
   "judge_wallet": "RTC4642c5ee8467f61ed91b5775b0eeba984dd776ba",
-  "submitted_at": "2026-05-01T07:20:00Z",
+  "submitted_at": "2026-05-01T09:15:00Z",
   "rankings": [
     {
-      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/2819",
+      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/7458",
       "rank": 1,
-      "score": 0.95,
+      "score": 0.92,
       "fraud_risk": "low",
-      "payout_recommendation": {"amount_rtc": 150, "rationale": "Red team UTXO implementation is high-value security work that directly improves the chain"},
-      "justification": "Security audits are critical for blockchain projects and this bounty specifically targets UTXO implementation bugs"
+      "payout_recommendation": {"amount_rtc": 10, "rationale": "4 findings with specific line references, confidence 0.85, covers critical CPU serial verification bypass in anti_double_mining.py"},
+      "justification": "FlintLeng's audit of anti_double_mining.py identifies CPU serial spoofing in normalize_fingerprint() with concrete code paths and commit f7e286e reference"
     },
     {
-      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/2890",
+      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/7457",
       "rank": 2,
-      "score": 0.90,
+      "score": 0.88,
       "fraud_risk": "low",
-      "payout_recommendation": {"amount_rtc": 100, "rationale": "AgentFolio-Beacon integration creates lasting infrastructure value"},
-      "justification": "Integration specs enable new use cases and attract more developers to the ecosystem"
+      "payout_recommendation": {"amount_rtc": 10, "rationale": "4 findings on arch_cross_validation.py substring matching bypass, confidence 0.88, well-structured report"},
+      "justification": "FlintLeng's arch_cross_validation audit identifies ARCH_ALIASES substring matching that bypasses all architecture validation with specific normalize_arch() function reference"
     },
     {
-      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/2868",
+      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/7493",
       "rank": 3,
       "score": 0.85,
       "fraud_risk": "low",
-      "payout_recommendation": {"amount_rtc": 30, "rationale": "VS Code extension improves developer experience significantly"},
-      "justification": "IDE integrations lower the barrier to entry for new contributors"
+      "payout_recommendation": {"amount_rtc": 10, "rationale": "claims_settlement.py audit with CRITICAL finding on sign_and_broadcast_transaction using random nonce, whole-file review of 390 lines"},
+      "justification": "Audit covers claims_settlement.py (lines 1-390) with critical finding on transaction signing using random nonce instead of deterministic nonce"
     },
     {
-      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/2864",
+      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/7448",
       "rank": 4,
-      "score": 0.80,
+      "score": 0.65,
       "fraud_risk": "medium",
-      "payout_recommendation": {"amount_rtc": 20, "rationale": "GitHub Action automates RTC awards but needs careful review for gaming prevention"},
-      "justification": "Automation is valuable but must include anti-gaming measures to prevent abuse"
+      "payout_recommendation": {"amount_rtc": 5, "rationale": "Body appears to be piped from stdin (@/dev/stdin), lacks specific findings detail"},
+      "justification": "sophia_attestation_inspector.py audit has minimal body content (@/dev/stdin), making it hard to verify claim quality without checking the referenced commit"
     },
     {
-      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/2869",
+      "claim_url": "https://github.com/Scottcjn/rustchain-bounties/issues/7446",
       "rank": 5,
-      "score": 0.75,
-      "fraud_risk": "low",
-      "payout_recommendation": {"amount_rtc": 10, "rationale": "Telegram bot provides mobile access to miner status and balances"},
-      "justification": "Mobile access is convenient but lower priority than security and developer tools"
+      "score": 0.60,
+      "fraud_risk": "medium",
+      "payout_recommendation": {"amount_rtc": 5, "rationale": "Body piped from stdin, lacks specific findings; P2P sync module is security-critical but report quality unverifiable from issue text alone"},
+      "justification": "rustchain_p2p_sync_secure.py audit has same @/dev/stdin body pattern as #7448, suggesting automated submission without human review of findings"
     }
   ]
 }
